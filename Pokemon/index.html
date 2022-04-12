@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="script.js"></script>
-
   <title>Document</title>
 </head>
 
@@ -20,28 +19,31 @@
       <input type="password" name="pass" id="pass" onchange="passValidate(this);">
       <div id="passwordError" class="errorInfo"></div>
     </div>
+  </div>
+
+  <div>
+    <label for="name">Namn:</label>
+    <input type="text" name="name" id="name" onchange="pokemonNameValidate(this)">
+    <div id="pokeNameError" class="errorInfo"></div>
+  </div>
   
-    <div>
-      <label for="name">Namn:</label>
-      <input type="text" name="name" id="name" onchange="pokemonNameValidate(this)">
-      <div id="pokeNameError" class="errorInfo"></div>
-    </div>
-    <div>
-      <label for="type">Typ:</label>
-      <input type="text" name="type" id="type">
-    </div>
-    <div>
-      <label for="level">Level:</label>
-      <input type="number" name="level" id="level">
-    </div>
+  <div>
+    <label for="type">Typ:</label>
+    <input type="text" name="type" id="type">
+  </div>
   
-    <div>
-      <button onclick="postData();">Skicka iväg ny data</button>
-      <button onclick="getDataFromStrapi();">Fetch Pokemons</button>
-    </div>
+  <div>
+    <label for="level">Level:</label>
+    <input type="number" name="level" id="level">
+  </div>
+  
+  <div>
+    <button onclick="postData();">Skicka iväg ny data</button>
+    <button onclick="getDataFromStrapi();">Fetch Pokemons</button>
   </div>
   <div id="pokemonFetched"></div>
 </body>
+
 <style>
   .errorInfo {
     font-size: 12px;
